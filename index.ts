@@ -24,3 +24,14 @@ let numberTwo: Array<string> = ['jose', 'maria'];
 
 //tupla
 let tuple: [number, string] = [1, 'jose'];
+
+
+//function
+function sum(a: number, b: number): number {
+  return a + b;
+}
+
+//funcion nova retornar nada
+function print(): void {
+  console.log('imprimir');
+}
