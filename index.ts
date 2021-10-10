@@ -35,3 +35,6 @@ function sum(a: number, b: number): number {
 function print(): void {
   console.log('imprimir');
 }
+
+type gender = 'm' | 'f';
+let sexo: gender = 'm';
