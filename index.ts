@@ -1,11 +1,19 @@
-let fullName = 'jose lujan';
-console.log('el nombre es' + fullName + 'aprobado');
-console.log(`El nombre es  ${fullName} aprobado`);
-let numbers = [1, 2, 3, 4, 5];
-for (let number of numbers) {
-  console.log(number);
-}
+// TypeScript
+//Tipos primitivos
+let edad: number = 10;
+let idDone = true; //false
+let lasName: string = 'Lujan'; // "comilla doble"  `literal`
 
-for (let index in numbers) {
-  console.log(index);
-}
+let userName = 'Jose Lujan';
+edad = 15;
+
+userName = 'juan';
+
+let genero: 'm' | 'f' = 'm';
+
+let prueba;
+prueba = 9;
+prueba = 'jose';
+
+let pruebaAny: any = true;
+pruebaAny = 1;
