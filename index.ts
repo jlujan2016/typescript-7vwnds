@@ -21,3 +21,6 @@ pruebaAny = 1;
 //arrays
 let numbers: number[] = [1, 2, 3, 4];
 let numberTwo: Array<string> = ['jose', 'maria'];
+
+//tupla
+let tuple: [number, string] = [1, 'jose'];
