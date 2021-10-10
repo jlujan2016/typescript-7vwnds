@@ -17,3 +17,7 @@ prueba = 'jose';
 
 let pruebaAny: any = true;
 pruebaAny = 1;
+
+//arrays
+let numbers: number[] = [1, 2, 3, 4];
+let numberTwo: Array<string> = ['jose', 'maria'];
