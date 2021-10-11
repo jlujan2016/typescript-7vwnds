@@ -64,14 +64,23 @@ let sexo: gender = 'm';
 class Printer {
   print(name: string, fullName: string): void {
     console.log(name, fullName);
+    const element: HTMLElement = document.getElementById('app');
+    element.innerHTML = `<h2>${name}${lasName}<h2>`;
   }
 }
 
+interface Estudiante {
+   name: string;
+   lastName: string;
+   age: number;
+  printName(): void;
+}
 //Generacion de Clases
-class Alumno extends Printer {
-  private name: string;
-  private lastName: string;
-  constructor(name, lastname) {
+class Alumno extends Printer implements Estudiante {
+   name: string;
+   lastName: string;
+   age: number;
+  constructor(name: string, lastname: string, age: number) {
     super();
     this.name = name;
     this.lastName = lasName;
@@ -83,7 +92,7 @@ class Alumno extends Printer {
 }
 
 class AlumnoDos extends Printer {
-  constructor(private name: string, private lastName: string) {
+  constructor(public name: string, public lastName: string,public age:number) {
     super();
     this.printName();
   }
@@ -93,8 +102,8 @@ class AlumnoDos extends Printer {
   }
 }
 
-let alumno: Alumno = new Alumno('Jose', 'Lujan');
+let alumno: Alumno = new Alumno('Jose', 'Lujan',27);
 alumno.printName();
 
-let alumnodos: AlumnoDos = new AlumnoDos('Jose', 'Lujan');
+let alumnodos: AlumnoDos = new AlumnoDos('Jose', 'Lujan',33);
 alumnodos.printName();
