@@ -74,3 +74,13 @@ class Alumno {
     console.log(this.name, this.lastName);
   }
 }
+
+class AlumnoDos {
+  constructor(private name: string, private lastName: string) {
+    this.print();
+  }
+
+  print(): void {
+    console.log(this.name, this.lastName);
+  }
+}
