@@ -61,26 +61,40 @@ function print(): void {
 type gender = 'm' | 'f';
 let sexo: gender = 'm';
 
+class Printer {
+  print(name: string, fullName: string): void {
+    console.log(name, fullName);
+  }
+}
+
 //Generacion de Clases
-class Alumno {
+class Alumno extends Printer {
   private name: string;
   private lastName: string;
   constructor(name, lastname) {
+    super();
     this.name = name;
     this.lastName = lasName;
-    this.print();
+    this.printName();
   }
-  public print() {
-    console.log(this.name, this.lastName);
+  public printName() {
+    this.print(this.name, this.lastName);
   }
 }
 
-class AlumnoDos {
+class AlumnoDos extends Printer {
   constructor(private name: string, private lastName: string) {
-    this.print();
+    super();
+    this.printName();
   }
 
-  print(): void {
+  printName(): void {
     console.log(this.name, this.lastName);
   }
 }
+
+let alumno: Alumno = new Alumno('Jose', 'Lujan');
+alumno.printName();
+
+let alumnodos: AlumnoDos = new AlumnoDos('Jose', 'Lujan');
+alumnodos.printName();
